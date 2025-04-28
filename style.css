@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&family=Pacifico&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Theme Variables */
+:root {
+    --background-color: #333;
+    --text-color: #fff;
+    --header-background: #444;
+    --section-background: #555;
+    --footer-background: #666;
+    --button-gradient-start: #ff7e5f;
+    --button-gradient-end: #feb47b;
+    --button-hover-gradient-start: #feb47b;
+    --button-hover-gradient-end: #ff7e5f;
+    --link-color: #1e90ff;
+    --link-hover-color: #ff4500;
+}
+
+body.light-theme {
+    --background-color: #fff;
+    --text-color: #000;
+    --header-background: #ddd;
+    --section-background: #eee;
+    --footer-background: #ccc;
+    --button-gradient-start: #6a11cb;
+    --button-gradient-end: #2575fc;
+    --button-hover-gradient-start: #2575fc;
+    --button-hover-gradient-end: #6a11cb;
+    --link-color: #007acc;
+    --link-hover-color: #ff6347;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Finger Paint', cursive;
+    background: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    background: var(--header-background);
+    padding: 20px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: var(--text-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Navigation Styling */
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.2s ease, background 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+nav a:hover {
+    color: var(--background-color);
+    background: var(--text-color);
+    transform: scale(1.1);
+}
+
+/* Section Styling */
+section {
+    margin: 20px 0;
+    padding: 25px;
+    background: var(--section-background);
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+section h2 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+section p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    background: var(--footer-background);
+    border-top: 3px solid var(--section-background);
+}
+
+footer p {
+    font-size: 1rem;
+    color: var(--text-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Subscribe Button Styling */
+.subscribe-button {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--button-gradient-start), var(--button-gradient-end));
+    color: var(--text-color);
+    padding: 20px 35px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(85, 85, 85, 0.5);
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.subscribe-button:hover {
+    background: linear-gradient(45deg, var(--button-hover-gradient-start), var(--button-hover-gradient-end));
+    transform: scale(1.2);
+    box-shadow: 0 15px 25px rgba(85, 85, 85, 0.6);
+}
+
+.subscribe-button:active {
+    transform: scale(0.9);
+    box-shadow: 0 5px 15px rgba(85, 85, 85, 0.4);
+}
+
+/* Span Styling */
+span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-color);
+    background: var(--section-background);
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+span:hover {
+    background: var(--footer-background);
+    transform: scale(1.1);
+}
+
+/* Link Styling */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+/* Sukuna Theme */
+body.sukuna-theme {
+    --background-color: #2b0000;
+    --text-color: #ff0000;
+    --header-background: #4c0000;
+    --section-background: #660000;
+    --footer-background: #330000;
+    --button-gradient-start: #ff4500;
+    --button-gradient-end: #8b0000;
+    --button-hover-gradient-start: #8b0000;
+    --button-hover-gradient-end: #ff4500;
+    --link-color: #ff6347;
+    --link-hover-color: #ff0000;
+}
+
+body.sukuna-theme header h1::after {
+    content: " - The King of Curses";
+}
+
+body.sukuna-theme section#sobre h3::after {
+    content: "Sobre Sukuna";
+    display: block;
+    font-size: 2rem;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+body.sukuna-theme section#sobre p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+body.sukuna-theme section#sobre p:first-of-type::after {
+    content: " Sukuna, o Rei das Maldições, é incomparável em poder e domínio. Sua força transcende limites, e sua presença inspira temor e reverência.";
+    display: block;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+body.sukuna-theme section#sobre p:nth-of-type(2)::after {
+    content: " Nenhuma maldição ou feiticeiro ousa desafiá-lo, pois sua supremacia é absoluta. Sukuna é a personificação do poder inigualável.";
+    display: block;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+body.sukuna-theme section#sobre p:nth-of-type(3)::after {
+    content: " Descubra mais sobre a lenda de Sukuna e testemunhe a grandiosidade de sua maldição suprema.";
+    display: block;
+    font-style: italic;
+    margin-top: 10px;
+}
